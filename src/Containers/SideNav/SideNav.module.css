@@ -1,6 +1,6 @@
 .container {
   height: 100%;
-  padding: 50px 29px;
+  padding: 20px 16px;
   background: var(--light-grey-f0f0f0) 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   overflow-y: auto;
@@ -11,11 +11,6 @@
 
 .container::-webkit-scrollbar {
   display: none;
-}
-
-.container > img {
-  width: 80px;
-  height: 80px;
 }
 
 .routesSection {
@@ -100,7 +95,7 @@
 .active {
   font: normal normal 800 16px/21px "Roboto";
   letter-spacing: 0px;
-  color: #335f32;
+  color: var(--red-alert-d10808);
   text-transform: uppercase;
   opacity: 1;
 }
@@ -187,20 +182,6 @@
   text-align: left;
   font: normal normal 800 14px/18px "Roboto";
   letter-spacing: 0px;
-  color: #c11111;
+  color: var(--red-alert-d10808);
   text-transform: uppercase;
-}
-
-@media screen and (min-width: 767px) and (max-width: 1023px) {
-  .container > img {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .container > img {
-    width: 80px;
-    height: 80px;
-  }
 }

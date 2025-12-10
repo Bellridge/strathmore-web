@@ -1,19 +1,14 @@
 import { motion } from "framer-motion";
 import SectionHeader from "../../Components/SectionHeader/SectionHeader";
 import classes from "./HomePageHowItWorks.module.css";
-import { useState } from "react";
-import VideoModal from "../../Components/Modals/AcceptedModal/VideoModal";
-import HowItWorksVideo from "./HowItWorksVideo";
 
 interface Props {
   title: string;
   description: string;
-  menu: { title: string; description: string }[];
+  menu: { title: string; description: string }[] | null;
 }
 
 const HomePageHowItWorks: React.FC<Props> = ({ title, description, menu }) => {
-  const [showModal, setShowModal] = useState(false);
-
   const containerVariants = {
     hidden: {},
     show: {
@@ -52,14 +47,6 @@ const HomePageHowItWorks: React.FC<Props> = ({ title, description, menu }) => {
       variants={containerVariants}
       viewport={{ once: true, amount: 0.3 }}
     >
-      {/* Video Modal */}
-      {showModal && (
-        <VideoModal
-          onClick={() => setShowModal(false)}
-          body={<HowItWorksVideo />}
-        />
-      )}
-
       <motion.div variants={fadeUp}>
         <SectionHeader title={title} color="#000" />
       </motion.div>
@@ -68,28 +55,30 @@ const HomePageHowItWorks: React.FC<Props> = ({ title, description, menu }) => {
         {description}
       </motion.p>
 
-      <motion.div
-        className={classes.howItWorksContainer}
-        variants={containerVariants}
-      >
-        {menu.map((data, i) => (
-          <motion.div
-            key={i}
-            className={classes.how}
-            variants={stepVariant}
-            whileHover={{
-              scale: 1.03,
-              transition: { type: "spring", stiffness: 180 },
-            }}
-          >
-            <div className={classes.stepNumber}>{i + 1}</div>
-            <div>
-              <h4>{data.title}</h4>
-              <p>{data.description}</p>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+      {menu && (
+        <motion.div
+          className={classes.howItWorksContainer}
+          variants={containerVariants}
+        >
+          {menu?.map((data, i) => (
+            <motion.div
+              key={i}
+              className={classes.how}
+              variants={stepVariant}
+              whileHover={{
+                scale: 1.03,
+                transition: { type: "spring", stiffness: 180 },
+              }}
+            >
+              <div className={classes.stepNumber}>{i + 1}</div>
+              <div>
+                <h4>{data.title}</h4>
+                <p>{data.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      )}
     </motion.section>
   );
 };

@@ -41,5 +41,6 @@
   .button {
     font-size: 14px;
     line-height: 23px;
+    padding: 0.5rem;
   }
 }

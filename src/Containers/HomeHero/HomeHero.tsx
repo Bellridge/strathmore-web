@@ -14,14 +14,15 @@ const HomeHero = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
       >
-        Strathmore Energy is not a typical advisory firm. We are the architects
-        of success for Nigeria’s oil and gas assets. Operating at the critical
-        nexus of technical depth, financial mastery, and operational grit, we
-        solve the industry's most complex integration challenges. We don't just
-        bridge gaps; we merge them, providing a unified, sovereign solution that
-        secures investment and guarantees project delivery from the first
-        funding commitment to First Oil flow. Partnering with Strathmore is
-        choosing unparalleled assurance.
+        Strathmore Energy is a leading indigenous energy solutions company
+        dedicated to maximizing the value and resilience of oil and gas assets
+        in Nigeria. We operate at the critical intersection of Technical
+        Excellence, Financial Structuring, and Operational Assurance. By
+        integrating critical services from risk management and essential marine
+        logistics to advanced capital readiness advisory, we provide a unified
+        platform that secures investment and guarantees reliable project
+        execution for our partners. We don't just solve problems; we deliver
+        integrated certainty in a complex energy landscape.
       </motion.p>
 
       <motion.div
@@ -40,6 +41,8 @@ const HomeHero = () => {
           Learn more
         </Button>
       </motion.div>
+
+      <div className={classes.overlay}></div>
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { BadgeCheck, LockOpen, ShieldCheck } from "lucide-react";
 import SectionHeader from "../../Components/SectionHeader/SectionHeader";
 import classes from "./HomePageWhyGiddaa.module.css";
 
@@ -8,16 +9,19 @@ const HomePageWhyGiddaa = () => {
       title: "Unlock Capital",
       description:
         "Turning geological data into bankable, fully de-risked financial models that accelerate investor confidence and funding timelines.",
+      icon: LockOpen,
     },
     {
       title: "Guarantee Continuity",
       description:
         "Establishing a supply chain and logistics fortress that eliminates operational downtime and shields project schedules.",
+      icon: ShieldCheck,
     },
     {
       title: "Set the Standard",
       description:
         "Leveraging the best of Nigerian expertise to deliver projects with uncompromising global quality and regulatory compliance.",
+      icon: BadgeCheck,
     },
   ];
 
@@ -61,11 +65,14 @@ const HomePageWhyGiddaa = () => {
       </motion.div>
 
       <motion.p variants={fadeUp}>
-        The next phase of Nigeria's energy sector requires more than ambition.
-        It demands flawless execution. Our mission is to be the catalyst of this
-        transformation, empowering indigenous operators to achieve global
-        standards of profitability and efficiency. We are relentless in our
-        commitment to:
+        Our mission is to be the trusted partner enabling the sustainable growth
+        of Nigeria's energy sector. We achieve this by focusing on three key
+        assurances: Capital De-risking (converting uncertainties into bankable
+        realities), Operational Continuity (providing an impenetrable logistics
+        framework across land and sea), and Local Excellence (championing
+        world-class standards delivered by expert Nigerian talent). We are
+        committed to building long-term value, ensuring every project is
+        optimized for efficiency, compliance, and profitability.
       </motion.p>
 
       <motion.div className={classes.whyContainer} variants={containerVariants}>
@@ -82,6 +89,9 @@ const HomePageWhyGiddaa = () => {
                 transition: { type: "spring", stiffness: 220 },
               }}
             >
+              <div className={classes.iconContainer}>
+                <data.icon className={classes.icon} size={24} />
+              </div>
               <h4>{data.title}</h4>
               <p>{data.description}</p>
             </motion.div>

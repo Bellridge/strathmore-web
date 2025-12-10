@@ -5,70 +5,38 @@ import HomePageHowItWorks from "../Containers/HomePageHowItWorks/HomePageHowItWo
 import HomePageWhyGiddaa from "../Containers/HomePageWhyGiddaa/HomePageWhyGiddaa";
 import HomeServicesHeader from "../Containers/HomeServicesHeader/HomeServicesHeader";
 
-const services = [
+export const services = [
   {
     title: "Financial Structuring & Capital Readiness",
     description:
-      "We specialize in making your asset irresistible to investors.",
-    options: [
-      {
-        title: "Investment-Grade Documentation",
-        description:
-          "We don't just write reports—we craft definitive documents, including Competent Person's Reports (CPR), that translate technical opportunity into secured capital.",
-      },
-      {
-        title: "Optimal Capital Architecture:",
-        description:
-          "Strategic advisory on sophisticated financing mechanisms like Reserve-Based Lending (RBL) and structured equity, engineered specifically to suit the Nigerian market and minimize risk exposure.",
-      },
-      {
-        title: "Total Due Diligence Assurance",
-        description:
-          "Our integrated Technical and Commercial Due Diligence (TCDD) process is rigorous and transparent, providing absolute assurance required by global financial institutions.",
-      },
-    ],
+      "We transform high-potential assets into funded ventures by providing strategic commercial support and financial architecture. Our role is to make your project investment-ready: we develop definitive documentation like the Competent Person's Report (CPR), advise on optimal financing structures (including RBL), and conduct integrated due diligence. This ensures that international financiers have absolute confidence in your asset's viability and accelerates your path to securing capital.",
+    options: null,
   },
   {
     title: "Operational Assurance & Logistics Mastery",
     description:
-      "We ensure the money raised is translated into uninterrupted field performance.",
-    options: [
-      {
-        title: "Fortified Risk Mitigation: ",
-        description:
-          "Our proprietary framework moves beyond risk identification to proactive risk elimination, ensuring all operational and commercial threats are neutralized before they impact cash flow.",
-      },
-      {
-        title: "Critical Supply Chain Certainty",
-        description:
-          "From complex mechanical systems to essential spare parts, we manage the end-to-end global and local procurement and installation on time, every time, financed correctly from the start.",
-      },
-      {
-        title: "Reliable Haulage & Compliance",
-        description:
-          "We manage complex logistics and transport across challenging terrains, ensuring every delivery is executed with unwavering safety, speed, and regulatory adherence.",
-      },
-    ],
+      "We ensure the money raised is translated directly into uninterrupted field performance by treating every operational challenge as a strategic risk to be managed. This mastery involves deploying a systematic framework for risk mitigation, handling the end-to-end procurement and installation of critical assets, and overseeing all aspects of the supply chain to guarantee project continuity and safety.",
+    options: null,
   },
   {
     title: "It Extends Further, We Also Offer",
     description:
-      "Our support ecosystem ensures the long-term health and efficiency of your operations.",
+      "We extend our assurance capabilities with comprehensive administrative, supply, and technical services necessary for safe, efficient field operations.",
     options: [
       {
-        title: "Essential Consumables ",
+        title: "Integrated Logistics & Marine Support",
         description:
-          "Dependable, compliant supply of drilling, production, and specialty chemicals to maintain peak operational performance.",
+          "We guarantee the compliant, reliable, and timely delivery of all materials, parts, and personnel across all terrains. This includes specialized land Haulage Support and essential Marine Support & Vessel Charter, providing secure vessels (e.g., security, crew, and tugboats) for reliable offshore and swamp logistics.",
       },
       {
-        title: "Safety & Compliance Equipment",
+        title: "Specialized Supply & Equipment",
         description:
-          "High-quality, certified Personal Protective Equipment (PPE) and safety gear to ensure the protection of your most valuable assets: your people.",
+          "We ensure continuous field operations through the reliable, timely provision of production and specialty chemicals (Supply of Chemicals & Consumables), alongside high-quality, certified protective gear (Personal Protective Equipment (PPE) & Safety Gear) to ensure personnel safety and regulatory compliance",
       },
       {
-        title: "High-Value Technical Consulting",
+        title: "Technical Consulting Services",
         description:
-          "On-demand access to specialized engineering and subsurface experts for time-sensitive challenges, including well test interpretation and production flow optimization.",
+          "We provide on-demand access to specialized expertise for short-term technical challenges, including reservoir studies, well test interpretation, and production optimization strategies.",
       },
     ],
   },

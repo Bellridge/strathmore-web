@@ -4,16 +4,15 @@ import CloseIcon from "@mui/icons-material/Close";
 
 type HeaderSideNavProps = {
   closeSideNav: () => void;
-  isHome?: boolean;
 };
 
-const HeaderSideNav = ({ closeSideNav, isHome }: HeaderSideNavProps) => {
+const HeaderSideNav = ({ closeSideNav }: HeaderSideNavProps) => {
   return (
     <section className={classes.container}>
       <div className={classes.close}>
         <CloseIcon onClick={closeSideNav} />
       </div>
-      <SideNav isHome={isHome} />
+      <SideNav />
     </section>
   );
 };

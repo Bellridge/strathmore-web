@@ -1,19 +1,6 @@
-import SpeedIcon from "@mui/icons-material/Speed";
-import CottageOutlinedIcon from "@mui/icons-material/CottageOutlined";
-import EditNoteOutlinedIcon from "@mui/icons-material/EditNoteOutlined";
-import FindInPageOutlinedIcon from "@mui/icons-material/FindInPageOutlined";
-import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
-import MapsHomeWorkOutlinedIcon from "@mui/icons-material/MapsHomeWorkOutlined";
-import EngineeringOutlinedIcon from "@mui/icons-material/EngineeringOutlined";
-import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
-import FolderCopyOutlinedIcon from "@mui/icons-material/FolderCopyOutlined";
-import CurrencyExchangeOutlinedIcon from "@mui/icons-material/CurrencyExchangeOutlined";
-import HistoryOutlinedIcon from "@mui/icons-material/HistoryOutlined";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-
 export type headerNavItemsType = {
   title: string;
-  route: string;
+  route: string | null;
   keywords?: string[];
   otherOptions: {
     isActive: boolean;
@@ -23,7 +10,7 @@ export type headerNavItemsType = {
   icons?: any;
   isActive?: boolean;
   sectionId?: string;
-}[];
+};
 
 export type footerNavItemsTypes = {
   title: string;
@@ -34,7 +21,7 @@ export type footerNavItemsTypes = {
   }[];
 }[];
 
-export const headerNavItems: headerNavItemsType = [
+export const headerNavItems: headerNavItemsType[] = [
   {
     title: "Home",
     route: "/",
@@ -45,16 +32,8 @@ export const headerNavItems: headerNavItemsType = [
   },
 
   {
-    title: "Our Mission",
-    route: "/properties",
-    keywords: [""],
-    otherOptions: null,
-    isVisible: true,
-    sectionId: "our-mission",
-  },
-  {
     title: "What We Do",
-    route: "/developers",
+    route: "/services",
     keywords: [""],
     otherOptions: null,
     isVisible: true,
@@ -62,7 +41,7 @@ export const headerNavItems: headerNavItemsType = [
   },
   {
     title: "Contact Us",
-    route: "/mortgage-banks",
+    route: null,
     keywords: [""],
     otherOptions: null,
     isVisible: true,
@@ -72,16 +51,16 @@ export const headerNavItems: headerNavItemsType = [
 
 export const footerNavItems: footerNavItemsTypes = [
   {
-    title: "Legal",
+    title: "Company",
     otherOptions: [
       {
-        title: "Privacy Policy",
-        route: "/privacy-policy",
+        title: "Home",
+        route: "/",
         isPriority: false,
       },
       {
-        title: "Terms & Conditions",
-        route: "/terms-and-conditions",
+        title: "What We Do",
+        route: "/services",
         isPriority: false,
       },
     ],
@@ -102,112 +81,5 @@ export const footerNavItems: footerNavItemsTypes = [
         isPriority: true,
       },
     ],
-  },
-];
-
-export const sideNavItems: headerNavItemsType = [
-  {
-    title: "DASHBOARD",
-    route: "/dashboard",
-    keywords: ["dashboard"],
-    otherOptions: null,
-    isVisible: true,
-    icons: <SpeedIcon />,
-  },
-
-  {
-    title: "PROPERTIES",
-    route: "/properties",
-    keywords: ["properties"],
-    otherOptions: null,
-    isVisible: true,
-    icons: <CottageOutlinedIcon />,
-  },
-
-  {
-    title: "APPLICATIONS",
-    route: "/applications",
-    keywords: ["applications"],
-    otherOptions: null,
-    isVisible: true,
-    icons: <EditNoteOutlinedIcon />,
-  },
-  {
-    title: "APPLICATION REVIEW",
-    route: "/application-review",
-    keywords: ["application-review"],
-    otherOptions: null,
-    isVisible: true,
-    icons: <FindInPageOutlinedIcon />,
-  },
-  {
-    title: "VIEWING REQUESTS",
-    route: "/viewing-requests",
-    keywords: ["viewing-requests"],
-    otherOptions: null,
-    isVisible: true,
-    icons: <RemoveRedEyeOutlinedIcon />,
-  },
-  {
-    title: "PROSPECTS",
-    route: "/prospects",
-    keywords: ["prospects"],
-    otherOptions: null,
-    isVisible: true,
-    icons: <MapsHomeWorkOutlinedIcon />,
-  },
-  {
-    title: "DEVELOPERS",
-    route: "/developers",
-    keywords: ["developers"],
-    otherOptions: null,
-    isVisible: true,
-    icons: <EngineeringOutlinedIcon />,
-  },
-  {
-    title: "PLANS",
-    route: "/plans",
-    keywords: ["plans"],
-    otherOptions: null,
-    isVisible: true,
-    icons: <DescriptionOutlinedIcon />,
-  },
-  {
-    title: "MORTGAGES",
-    route: "/mortgages",
-    keywords: ["mortgages"],
-    otherOptions: null,
-    isVisible: true,
-    icons: <FolderCopyOutlinedIcon />,
-  },
-  {
-    title: "TRANSACTIONS & EARNINGS",
-    route: "/transactions-and-earnings/summary",
-    keywords: [
-      "transactions-and-earnings",
-      "transactions-and-earnings/summary",
-    ],
-    otherOptions: null,
-    isVisible: true,
-    icons: <CurrencyExchangeOutlinedIcon />,
-  },
-  {
-    title: "DEBT RECOVERY",
-    route: "/debt-revovery",
-    keywords: ["debt-revovery"],
-    otherOptions: null,
-    isVisible: true,
-    icons: <HistoryOutlinedIcon />,
-  },
-  {
-    title: "ACCOUNT & SETTINGS",
-    route: "/account-and-settings",
-    keywords: ["account-and-settings"],
-    otherOptions: {
-      isActive: false,
-      data: [{ title: "Company", route: "/company", isLive: true }],
-    },
-    isVisible: true,
-    icons: <PersonOutlineOutlinedIcon />,
   },
 ];
