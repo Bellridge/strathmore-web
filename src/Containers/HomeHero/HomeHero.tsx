@@ -1,44 +1,65 @@
+import { useState, useEffect, useRef } from "react";
+import SlidingBackground from "../../Components/SlidingBackground/SlidingBackground";
 import classes from "./HomeHero.module.css";
 import { motion } from "framer-motion";
 import Button from "../../Components/Button/Button";
 
+const images = [
+  "https://res.cloudinary.com/dmbqk1irb/image/upload/v1765443555/environmental-pollution-industry-exterior_1_p1978z.jpg",
+  "https://res.cloudinary.com/dmbqk1irb/image/upload/v1765443555/environmental-pollution-industry-exterior-daylight_1_weaw04.jpg",
+  "https://res.cloudinary.com/dmbqk1irb/image/upload/v1765370625/maksym-kaharlytskyi-u13zBF4r56A-unsplash_dbajsj.jpg",
+];
+
 const HomeHero = () => {
+  const [index, setIndex] = useState(0);
+  const prevIndex = useRef(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      prevIndex.current = index;
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [index]);
+
+  const direction = 1;
+
   return (
     <section className={classes.container} id="home">
+      <SlidingBackground
+        prev={images[prevIndex.current]}
+        current={images[index]}
+        direction={direction}
+      />
+
       <h1>
-        Integrated Certainty. <br />
-        De-Risked Capital. <span>Proven Execution</span>
+        Powering Nigeria's <br /> <span>Energy</span> Future
       </h1>
+
       <motion.p
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+        transition={{ delay: 0.4, duration: 0.8 }}
       >
-        Strathmore Energy is a leading indigenous energy solutions company
-        dedicated to maximizing the value and resilience of oil and gas assets
-        in Nigeria. We operate at the critical intersection of Technical
-        Excellence, Financial Structuring, and Operational Assurance. By
-        integrating critical services from risk management and essential marine
-        logistics to advanced capital readiness advisory, we provide a unified
-        platform that secures investment and guarantees reliable project
-        execution for our partners. We don't just solve problems; we deliver
-        integrated certainty in a complex energy landscape.
+        Integrated Technical, Commercial and Financial solutions for a
+        sustainable and prosperous energy sector.
       </motion.p>
 
       <motion.div
         className={classes.buttonSection}
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
+        transition={{ delay: 0.7, duration: 0.6 }}
       >
         <Button
-          onClick={() => {
+          onClick={() =>
             document.getElementById("what-we-do")?.scrollIntoView({
               behavior: "smooth",
-            });
-          }}
+            })
+          }
         >
-          Learn more
+          Explore our Solutions
         </Button>
       </motion.div>
 

@@ -1,9 +1,7 @@
 import Layout from "../Components/Layout/Layout";
 import HomeHero from "../Containers/HomeHero/HomeHero";
 import HomePageGetStarted from "../Containers/HomePageGetStarted/HomePageGetStarted";
-import HomePageHowItWorks from "../Containers/HomePageHowItWorks/HomePageHowItWorks";
 import HomePageWhyGiddaa from "../Containers/HomePageWhyGiddaa/HomePageWhyGiddaa";
-import HomeServicesHeader from "../Containers/HomeServicesHeader/HomeServicesHeader";
 
 export const services = [
   {
@@ -47,7 +45,7 @@ const HomePage = () => {
     <Layout>
       <HomeHero />
       <HomePageWhyGiddaa />
-      <HomeServicesHeader />
+      {/* <HomeServicesHeader />
       {services.map((data) => {
         return (
           <HomePageHowItWorks
@@ -57,7 +55,7 @@ const HomePage = () => {
             key={data?.title}
           />
         );
-      })}
+      })} */}
       <HomePageGetStarted />
     </Layout>
   );

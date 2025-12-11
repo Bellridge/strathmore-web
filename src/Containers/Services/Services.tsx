@@ -1,6 +1,7 @@
 import { services } from "../../Pages/HomePage";
 import HomePageGetStarted from "../HomePageGetStarted/HomePageGetStarted";
 import HomePageHowItWorks from "../HomePageHowItWorks/HomePageHowItWorks";
+import HomeServicesHeader from "../HomeServicesHeader/HomeServicesHeader";
 import ServicesHero from "../ServicesHero/ServicesHero";
 
 const Services = () => {
@@ -8,6 +9,7 @@ const Services = () => {
     <>
       <ServicesHero />
       <div id="services">
+        <HomeServicesHeader />
         {services.map((data) => {
           return (
             <HomePageHowItWorks

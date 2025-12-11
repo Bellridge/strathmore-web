@@ -17,7 +17,7 @@ export type footerNavItemsTypes = {
   otherOptions: {
     title: string;
     route: string;
-    isPriority: boolean;
+    isInternal: boolean;
   }[];
 }[];
 
@@ -56,12 +56,12 @@ export const footerNavItems: footerNavItemsTypes = [
       {
         title: "Home",
         route: "/",
-        isPriority: false,
+        isInternal: true,
       },
       {
         title: "What We Do",
         route: "/services",
-        isPriority: false,
+        isInternal: true,
       },
     ],
   },
@@ -71,14 +71,20 @@ export const footerNavItems: footerNavItemsTypes = [
     otherOptions: [
       {
         title: "info@strathmore.com",
-        route: "/",
-        isPriority: false,
+        route: "mailto:info@strathmoreservice.com",
+        isInternal: false,
       },
 
       {
-        title: "Phone",
+        title: "+2347075760061",
+        route: "tel:+2347075760061",
+        isInternal: false,
+      },
+      {
+        title:
+          "NSE Building, 1 engineering close off idowu Taylor Victoria Island",
         route: "/",
-        isPriority: true,
+        isInternal: true,
       },
     ],
   },

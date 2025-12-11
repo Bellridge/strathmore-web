@@ -13,14 +13,21 @@ const Footer = () => {
                 <h4>{data.title}</h4>
                 <div className={classes.otherOptions}>
                   {data?.otherOptions?.map((datum, j) => {
+                    if (!datum?.isInternal) {
+                      return (
+                        <a
+                          href={datum.route}
+                          className={`${classes.priority}`}
+                          key={j}
+                        >
+                          {datum.title}
+                        </a>
+                      );
+                    }
                     return (
                       <Link
                         to={datum.route}
-                        className={`${
-                          datum.isPriority
-                            ? classes.priority
-                            : classes.notPriority
-                        }`}
+                        className={`${classes.priority}`}
                         key={j}
                       >
                         {datum.title}
