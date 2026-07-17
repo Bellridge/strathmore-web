@@ -1,0 +1,85 @@
+.bar {
+  background: var(--paper-raised);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 20;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+}
+
+.routesSection {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.routesSection button {
+  all: unset;
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+  padding-block: 0.35rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.routesSection button:hover {
+  color: var(--ink);
+}
+
+.routesSection button:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+.active {
+  color: var(--ink) !important;
+  border-bottom-color: var(--red) !important;
+}
+
+.hamburgerMenu {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.hamburgerMenu:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+.sideNav {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 40;
+  background-color: var(--paper-raised);
+  overflow: hidden;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1023px) {
+  .inner {
+    height: 72px;
+  }
+
+  .routesSection {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    display: block;
+  }
+}

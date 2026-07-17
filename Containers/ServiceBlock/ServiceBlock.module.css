@@ -1,0 +1,131 @@
+.block {
+  padding-block: var(--space-8);
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.eyebrow {
+  color: var(--steel);
+}
+
+.title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  color: var(--ink);
+}
+
+.description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+  max-width: 68ch;
+}
+
+.flatBullets,
+.nestedBullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.flatBullets {
+  margin-top: var(--space-1);
+  max-width: 68ch;
+}
+
+.flatBullets li,
+.nestedBullets li {
+  position: relative;
+  padding-left: 1.3em;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+.flatBullets li::before,
+.nestedBullets li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--red);
+}
+
+.flatBullets li strong,
+.nestedBullets li strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.options {
+  margin-top: var(--space-3);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.option {
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--line);
+}
+
+.option h4 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.option p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+.option .nestedBullets {
+  margin-top: 0.75rem;
+}
+
+.option .nestedBullets li {
+  font-size: 0.9rem;
+}
+
+.closing {
+  margin-top: var(--space-2);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+  max-width: 68ch;
+}
+
+.result {
+  margin-top: var(--space-2);
+  padding-left: var(--space-2);
+  border-left: 2px solid var(--brass);
+  font-style: italic;
+  color: var(--ink);
+  max-width: 60ch;
+}
+
+.resultLabel {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-right: 0.4em;
+}
+
+@media (max-width: 900px) {
+  .options {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}

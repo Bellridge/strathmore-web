@@ -1,0 +1,23 @@
+.container {
+  background: var(--paper-raised);
+  padding: var(--space-3) 0;
+  overflow-y: auto;
+  height: 100%;
+  position: relative;
+  z-index: 20;
+}
+
+.close {
+  display: block;
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 0.5rem var(--space-3);
+}
+
+.close:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}

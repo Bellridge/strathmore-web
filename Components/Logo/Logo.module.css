@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container > img:nth-child(1) {
+  width: 118px;
+  height: 56px;
+}
+
+@media screen and (max-width: 767px) {
+  .container > img:nth-child(1) {
+    width: 84px;
+    height: 40px;
+  }
+}

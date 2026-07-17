@@ -1,0 +1,79 @@
+.section {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.container {
+  padding-block: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.eyebrow {
+  color: var(--brass);
+}
+
+.heading {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  line-height: 1.2;
+  max-width: 20ch;
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(247, 244, 238, 0.8);
+  max-width: 60ch;
+}
+
+.contact {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line-on-ink);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.contactRow dt {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 238, 0.55);
+  margin-bottom: 0.4rem;
+}
+
+.contactRow dd {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--paper);
+  max-width: 34ch;
+}
+
+.contactRow a {
+  color: var(--paper);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-on-ink);
+}
+
+.contactRow a:hover {
+  border-color: var(--paper);
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding-block: var(--space-8);
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}

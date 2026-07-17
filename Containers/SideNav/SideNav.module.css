@@ -1,0 +1,38 @@
+.container {
+  height: 100%;
+  padding: 0 var(--space-3) var(--space-3);
+  background: var(--paper-raised);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.routesSection {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.routesSection a {
+  font-family: var(--body-font);
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-muted);
+  transition: color 0.2s ease-in-out;
+}
+
+.routesSection a:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+.active {
+  color: var(--red) !important;
+}
+
+.inActive:hover {
+  color: var(--ink);
+}
